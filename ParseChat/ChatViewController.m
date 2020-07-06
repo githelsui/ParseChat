@@ -29,6 +29,7 @@
 - (void)onTimer {
     // construct query
     PFQuery *query = [PFQuery queryWithClassName:@"Message_fbu2020"];
+    [query includeKey:@"user"];
     query.limit = 20;
     [query orderByDescending:@"createdAt"];
     // fetch data asynchronously
@@ -47,6 +48,7 @@
     PFObject *chatMessage = [PFObject objectWithClassName:@"Message_fbu2020"];
     // Use the name of your outlet to get the text the user typed
     chatMessage[@"text"] = self.chatMessageField.text;
+    chatMessage[@"user"] = PFUser.currentUser;
     [chatMessage saveInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (succeeded) {
             NSLog(@"The message was saved!");
@@ -65,6 +67,14 @@
     ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell"];
     PFObject *message = self.messages[indexPath.row];
     cell.messageLabel.text = message[@"text"];
+    PFUser *user = message[@"user"];
+    if (user != nil) {
+        // User found! update username label with username
+        cell.userLabel.text = user.username;
+    } else {
+        // No user found, set default username
+        cell.userLabel.text = @"🤖";
+    }
     return cell;
 }
 
