@@ -59,7 +59,7 @@
                     <connections>
                         <outlet property="passwordField" destination="TnS-4I-j9d" id="zDJ-ZL-det"/>
                         <outlet property="usernameField" destination="V1C-9H-bWJ" id="Ov2-i1-HYs"/>
-                        <segue destination="U6H-eH-gTm" kind="presentation" identifier="LoginSegue" id="aHu-hU-Yua"/>
+                        <segue destination="U6H-eH-gTm" kind="presentation" identifier="ChatNavigationController" id="aHu-hU-Yua"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -69,7 +69,7 @@
         <!--Chat View Controller-->
         <scene sceneID="NAQ-uL-xk8">
             <objects>
-                <viewController id="fuy-4c-hV5" customClass="ChatViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fuy-4c-hV5" customClass="ChatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ama-Vi-NbK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="1657.9710144927537" y="130.58035714285714"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Chat Navigation Controller-->
         <scene sceneID="x7D-Jq-QAz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U6H-eH-gTm" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ChatNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U6H-eH-gTm" customClass="ChatNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vhU-E6-HRk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
