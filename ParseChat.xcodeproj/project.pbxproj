@@ -20,6 +20,7 @@
 		CA86468024B390CD000952CF /* ParseChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA86467F24B390CD000952CF /* ParseChatTests.m */; };
 		CA86468B24B390CE000952CF /* ParseChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA86468A24B390CE000952CF /* ParseChatUITests.m */; };
 		CA86469A24B39F25000952CF /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA86469924B39F25000952CF /* ChatViewController.m */; };
+		CA86469F24B3A163000952CF /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA86469E24B3A163000952CF /* ChatCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		CA86468C24B390CE000952CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA86469824B39F25000952CF /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		CA86469924B39F25000952CF /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		CA86469D24B3A163000952CF /* ChatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		CA86469E24B3A163000952CF /* ChatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		DAE3B613A33726053260647C /* Pods_ParseChat_ParseChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseChat_ParseChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD63C2337BE071275F900981 /* Pods_ParseChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CD8E2DCE2E3C3DE8DD96A9 /* Pods-ParseChat-ParseChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChat-ParseChatUITests.release.xcconfig"; path = "Target Support Files/Pods-ParseChat-ParseChatUITests/Pods-ParseChat-ParseChatUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,19 +150,21 @@
 		CA86466224B390CD000952CF /* ParseChat */ = {
 			isa = PBXGroup;
 			children = (
+				CA86469C24B3A13D000952CF /* Views */,
+				CA86469B24B3A12F000952CF /* ViewControllers */,
 				CA86466324B390CD000952CF /* AppDelegate.h */,
 				CA86466424B390CD000952CF /* AppDelegate.m */,
 				CA86466624B390CD000952CF /* SceneDelegate.h */,
 				CA86466724B390CD000952CF /* SceneDelegate.m */,
 				CA86466924B390CD000952CF /* LoginViewController.h */,
 				CA86466A24B390CD000952CF /* LoginViewController.m */,
+				CA86469824B39F25000952CF /* ChatViewController.h */,
+				CA86469924B39F25000952CF /* ChatViewController.m */,
 				CA86466C24B390CD000952CF /* Main.storyboard */,
-				CA86466F24B390CD000952CF /* Assets.xcassets */,
 				CA86467124B390CD000952CF /* LaunchScreen.storyboard */,
 				CA86467424B390CD000952CF /* Info.plist */,
 				CA86467524B390CD000952CF /* main.m */,
-				CA86469824B39F25000952CF /* ChatViewController.h */,
-				CA86469924B39F25000952CF /* ChatViewController.m */,
+				CA86466F24B390CD000952CF /* Assets.xcassets */,
 			);
 			path = ParseChat;
 			sourceTree = "<group>";
@@ -180,6 +185,22 @@
 				CA86468C24B390CE000952CF /* Info.plist */,
 			);
 			path = ParseChatUITests;
+			sourceTree = "<group>";
+		};
+		CA86469B24B3A12F000952CF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CA86469C24B3A13D000952CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA86469D24B3A163000952CF /* ChatCell.h */,
+				CA86469E24B3A163000952CF /* ChatCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +444,7 @@
 				CA86466B24B390CD000952CF /* LoginViewController.m in Sources */,
 				CA86466524B390CD000952CF /* AppDelegate.m in Sources */,
 				CA86469A24B39F25000952CF /* ChatViewController.m in Sources */,
+				CA86469F24B3A163000952CF /* ChatCell.m in Sources */,
 				CA86467624B390CD000952CF /* main.m in Sources */,
 				CA86466824B390CD000952CF /* SceneDelegate.m in Sources */,
 			);

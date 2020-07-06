@@ -3,4 +3,19 @@
    uuid = "217C7205-912E-4690-8846-B36F856ADE46"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "E07BFEF9-831E-49BB-8D1F-05F7F9901044"
+            shouldBeEnabled = "Yes"
+            condition = "-[PFObject copyWithZone:]"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
