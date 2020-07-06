@@ -61,7 +61,7 @@
                 [self presentViewController:alert animated:YES completion:^{}];
             } else {
                 NSLog(@"User registered successfully");
-                // manually segue to logged in view
+                [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
             }
         }];
     }
@@ -73,37 +73,37 @@
     BOOL emptyString = [username isEqual:@""];
     if(emptyString){
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Username cannot be empty."
-                                                                              message:@""
-                                                                       preferredStyle:(UIAlertControllerStyleAlert)];
-               UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
-                                                                  style:UIAlertActionStyleDefault
-                                                                handler:^(UIAlertAction * _Nonnull action) {
-                   // handle response here.
-               }];
-               // add the OK action to the alert controller
-               [alert addAction:okAction];
-               [self presentViewController:alert animated:YES completion:^{}];
+                                                                       message:@""
+                                                                preferredStyle:(UIAlertControllerStyleAlert)];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+            // handle response here.
+        }];
+        // add the OK action to the alert controller
+        [alert addAction:okAction];
+        [self presentViewController:alert animated:YES completion:^{}];
     } else {
-    [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
-        if (error != nil) {
-            NSLog(@"User log in failed: %@", error.localizedDescription);
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"User login failed"
-                                                                                  message:@""
-                                                                           preferredStyle:(UIAlertControllerStyleAlert)];
-                   UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
-                                                                      style:UIAlertActionStyleDefault
-                                                                    handler:^(UIAlertAction * _Nonnull action) {
-                                                                            // handle response here.
-                                                                    }];
-                   // add the OK action to the alert controller
-                   [alert addAction:okAction];
-                   [self presentViewController:alert animated:YES completion:^{}];
-        } else {
-            NSLog(@"User logged in successfully");
-            
-            // display view controller that needs to shown after successful login
-        }
-    }];
+        [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
+            if (error != nil) {
+                NSLog(@"User log in failed: %@", error.localizedDescription);
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"User login failed"
+                                                                               message:@""
+                                                                        preferredStyle:(UIAlertControllerStyleAlert)];
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                   style:UIAlertActionStyleDefault
+                                                                 handler:^(UIAlertAction * _Nonnull action) {
+                    // handle response here.
+                }];
+                // add the OK action to the alert controller
+                [alert addAction:okAction];
+                [self presentViewController:alert animated:YES completion:^{}];
+            } else {
+                NSLog(@"User logged in successfully");
+                [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
+                // display view controller that needs to shown after successful login
+            }
+        }];
     }
 }
 
