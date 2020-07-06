@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,7 @@
 		94B34E6DC6325D9BAF52651A /* Pods_ParseChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840709AE614E7BE578F157E2 /* Pods_ParseChatTests.framework */; };
 		CA86466524B390CD000952CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA86466424B390CD000952CF /* AppDelegate.m */; };
 		CA86466824B390CD000952CF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA86466724B390CD000952CF /* SceneDelegate.m */; };
-		CA86466B24B390CD000952CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA86466A24B390CD000952CF /* ViewController.m */; };
+		CA86466B24B390CD000952CF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA86466A24B390CD000952CF /* LoginViewController.m */; };
 		CA86466E24B390CD000952CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA86466C24B390CD000952CF /* Main.storyboard */; };
 		CA86467024B390CD000952CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA86466F24B390CD000952CF /* Assets.xcassets */; };
 		CA86467324B390CD000952CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA86467124B390CD000952CF /* LaunchScreen.storyboard */; };
@@ -49,8 +49,8 @@
 		CA86466424B390CD000952CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CA86466624B390CD000952CF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		CA86466724B390CD000952CF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		CA86466924B390CD000952CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CA86466A24B390CD000952CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CA86466924B390CD000952CF /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CA86466A24B390CD000952CF /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		CA86466D24B390CD000952CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA86466F24B390CD000952CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA86467224B390CD000952CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -116,7 +116,6 @@
 				0E4B82790F5D0B56BBA40E57 /* Pods-ParseChatTests.debug.xcconfig */,
 				35BE86C2C6575038AFC06010 /* Pods-ParseChatTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -149,8 +148,8 @@
 				CA86466424B390CD000952CF /* AppDelegate.m */,
 				CA86466624B390CD000952CF /* SceneDelegate.h */,
 				CA86466724B390CD000952CF /* SceneDelegate.m */,
-				CA86466924B390CD000952CF /* ViewController.h */,
-				CA86466A24B390CD000952CF /* ViewController.m */,
+				CA86466924B390CD000952CF /* LoginViewController.h */,
+				CA86466A24B390CD000952CF /* LoginViewController.m */,
 				CA86466C24B390CD000952CF /* Main.storyboard */,
 				CA86466F24B390CD000952CF /* Assets.xcassets */,
 				CA86467124B390CD000952CF /* LaunchScreen.storyboard */,
@@ -416,7 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA86466B24B390CD000952CF /* ViewController.m in Sources */,
+				CA86466B24B390CD000952CF /* LoginViewController.m in Sources */,
 				CA86466524B390CD000952CF /* AppDelegate.m in Sources */,
 				CA86467624B390CD000952CF /* main.m in Sources */,
 				CA86466824B390CD000952CF /* SceneDelegate.m in Sources */,
